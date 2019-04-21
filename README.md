@@ -7,6 +7,7 @@ To install this custom library, you must clone the repository and move it into y
 ## Example
 ```ino
 #include "LedStripController.h"
+#include "44KeysCodes.h"
 
 #define RGB_CHANNEL_0 2
 #define RGB_CHANNEL_1 3
@@ -24,8 +25,11 @@ void setup()
 void loop() 
 {
   // Write commands to the LED strip controller.
-  led_channel_0.writeCommand(0xFF02FD);
-  led_channel_1.writeCommand(0xFF02FD);
+  led_channel_0.writeCommand(IR_ON);
+  led_channel_0.writeCommand(IR_G);
+  
+  led_channel_1.writeCommand(IR_ON);
+  led_channel_1.writeCommand(IR_R);
 }
 ```
 
