@@ -9,7 +9,7 @@ To install this custom library, you must clone the repository and move it into y
 #include "LedStripController.h"
 
 #define RGB_CHANNEL_0 2
-#define RGB_CHANNEL_1 2
+#define RGB_CHANNEL_1 3
 
 LedStripController led_channel_0;
 LedStripController led_channel_1;
