@@ -10,7 +10,7 @@ LedStripController::LedStripController()
 {
 }
 
-void LedStripController::begin(uint8_t pinNumber)
+void LedStripController::begin(int pinNumber)
 {
   this->pinNumber = pinNumber;
   pinMode(this->pinNumber, OUTPUT);
@@ -44,13 +44,13 @@ void LedStripController::writeLogical0(void)
   digitalWrite(this->pinNumber, LOW);
   delayMicroseconds(550);
   digitalWrite(this->pinNumber, HIGH);
-  delayMicroseconds(1690);
+  delayMicroseconds(550);
 }
 
 void LedStripController::writeLogical1(void)
 {
   digitalWrite(this->pinNumber, LOW);
-  delayMicroseconds(550);
+  delayMicroseconds(1690);
   digitalWrite(this->pinNumber, HIGH);
   delayMicroseconds(550);
 }
