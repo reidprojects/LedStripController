@@ -1,7 +1,7 @@
 #include "LedStripController.h"
 
 
-LedStripController::LedStripController(uint8_t pinNumber)
+LedStripController::LedStripController(int pinNumber)
 {
   this->begin(pinNumber);
 }
@@ -50,9 +50,9 @@ void LedStripController::writeLogical0(void)
 void LedStripController::writeLogical1(void)
 {
   digitalWrite(this->pinNumber, LOW);
-  delayMicroseconds(1690);
-  digitalWrite(this->pinNumber, HIGH);
   delayMicroseconds(550);
+  digitalWrite(this->pinNumber, HIGH);
+  delayMicroseconds(1690);
 }
 
 void LedStripController::writeByte(uint8_t byte_to_send)

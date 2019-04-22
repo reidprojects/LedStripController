@@ -18,9 +18,9 @@ class LedStripController
 {
   public:
     LedStripController();
-    LedStripController(uint8_t);
+    LedStripController(int);
     void writeCommand(long);
-    void begin(uint8_t);
+    void begin(int);
 
   private:
     int pinNumber;
